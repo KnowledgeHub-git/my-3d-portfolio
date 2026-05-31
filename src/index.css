@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black-100 text-white font-sans overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .c-space {
+    @apply max-w-7xl mx-auto px-5 md:px-10;
+  }
+
+  .head-text {
+    @apply sm:text-4xl text-3xl font-semibold text-gray_gradient;
+  }
+
+  .nav-ul {
+    @apply flex flex-col items-center gap-4 sm:flex-row md:gap-8;
+  }
+
+  .nav-li {
+    @apply text-white-600 hover:text-white transition-colors text-lg font-medium cursor-pointer;
+  }
+
+  .text-gray_gradient {
+    @apply bg-gradient-to-r from-[#BEC1CF] to-[#737680] bg-clip-text text-transparent;
+  }
+
+  /* Waving Hand animation styling */
+  .waving-hand {
+    animation-name: waving-hand;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+}
+
+@keyframes waving-hand {
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
